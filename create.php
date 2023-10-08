@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 }
 
 $sql = "INSERT INTO article (name, quantity, price)
-VALUES ($_POST['name'], $_POST['quantity'], $_POST['price'])";
+VALUES ('".$_POST['name']."',".$_POST['quantity'].",".$_POST['price'].")";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
