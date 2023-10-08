@@ -90,7 +90,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "<tr> <td>". $row["code"]. "</td> <td> ". $row["name"]. " </td><td> ".$row["quantity"] . "</td><td>".$row["price"]. "</td><td>"."<buton name="supprimer"></button><;
+        echo "<tr> <td>". $row["code"]. "</td> <td> ". $row["name"]. " </td><td> ".$row["quantity"] . "</td><td>".$row["price"]. "</td><td><button >editer</button><button >delete</button></td></tr>";
        
       
     }
