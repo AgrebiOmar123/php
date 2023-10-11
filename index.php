@@ -56,6 +56,18 @@
                   background-color: #04AA6D;
                   color: white;
                 }
+                a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
                 </style>
                 </head>
                 <body>
@@ -90,7 +102,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "<tr> <td>". $row["code"]. "</td> <td> ". $row["name"]. " </td><td> ".$row["quantity"] . "</td><td>".$row["price"]. "</td><td><button >editer</button><button >delete</button></td></tr>";
+        echo "<tr> <td>". $row["code"]. "</td> <td> ". $row["name"]. " </td><td> ".$row["quantity"] . "</td><td>".$row["price"]. "</td><td><a href='update.php?code=".$row["code"] ."'>editer</a><button >delete</button></td></tr>";
        
       
     }
